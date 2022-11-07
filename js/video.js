@@ -14,6 +14,7 @@ function playVideo(){
 document.querySelector("#play").addEventListener("click", function() {
  	console.log("Play Video");
 	playVideo();
+	document.querySelector("#volume").innerHTML = video.volume * 100 + '%';
 	
  });
 // creating a function called pauseVideo that pauses the video
@@ -59,10 +60,12 @@ document.querySelector('#mute').addEventListener("click", function(){
 	if (video.volume > 0){
 		video.volume = 0;
 		document.querySelector("#mute").innerHTML = 'Unmute';
+		document.querySelector("#volume").innerHTML = video.volume * 100 + '%';
 	}
 	else{
 		video.volume = 1;
 		document.querySelector("#mute").innerHTML = 'Mute';
+		document.querySelector("#volume").innerHTML = video.volume * 100 + '%';
 	}
 
 })
