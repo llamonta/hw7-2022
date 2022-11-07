@@ -62,12 +62,16 @@ document.querySelector('#mute').addEventListener("click", function(){
 		video.muted = true
 		document.querySelector("#mute").innerHTML = 'Unmute';
 		document.querySelector("#volume").innerHTML = video.volume * 100 + '%';
+		document.getElementById('slider').value = 0;
+
 	}
 	else{
 		video.volume = 1;
 		document.querySelector("#mute").innerHTML = 'Mute';
 		video.muted = false
 		document.querySelector("#volume").innerHTML = video.volume * 100 + '%';
+		document.getElementById('slider').value = 100;
+
 	}
 
 })
